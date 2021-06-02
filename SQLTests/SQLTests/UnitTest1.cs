@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+
 
 namespace SQLTests
 {
@@ -26,6 +29,7 @@ namespace SQLTests
         {
             _sqlHelper.Insert("Products",
                 new Dictionary<string, string> { { "Id", "23" }, { "Name", "'Test23'" }, { "Count", "234" } });
+
             var res = _sqlHelper.IsRowExistedInTable("Products",
                 new Dictionary<string, string> { { "Id", "23" }, { "Name", "'Test23'" }, { "Count", "234" } });
 
@@ -37,6 +41,7 @@ namespace SQLTests
         {
             _sqlHelper.Update("Products",
                 new Dictionary<string, string> {{"Count", "15"}}, new Dictionary<string, string> { {"Id", "1" } });
+
             var res = _sqlHelper.IsRowExistedInTable("Products",
                 new Dictionary<string, string> { { "Count", "15" } });
 

@@ -56,6 +56,14 @@
               "target": "Package",
               "version": "[3.16.1, )"
             },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.5.5, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
